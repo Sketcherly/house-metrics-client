@@ -1,3 +1,0 @@
-void setupTemperatureDevice();
-
-float getTemperature();

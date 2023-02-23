@@ -1,6 +1,8 @@
-#include <WiFi.h>
+// #define WIFI_SSID "TP-LINK_1755"
+// #define WIFI_PASSWORD "1234567890"
 
-#include "wifi.1.h"
+#define WIFI_SSID "TP-LINK_F65D"
+#define WIFI_PASSWORD "lidongpo"
 
 void wifiStartUp() {
   // connect to WiFi
