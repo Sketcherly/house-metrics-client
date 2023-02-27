@@ -20,7 +20,9 @@ void TaskSystemTime(void *pvParameters) {  // This is a task.
   (void)pvParameters;
 
   for (;;) {
+    Serial.println("TaskSystemTime start");
     configTime(TIME_ZONE_OFFSET_SECONDS, DAY_LIGHT_OFFSET_SECONDS, NTP_SERVER);
+    Serial.println("TaskSystemTime end");
 
     delay(1000 * 60 * 60 * 24);
   }

@@ -15,14 +15,18 @@ void defaultLEDStartUp() {
     TaskDefaultLED,
     "TaskDefaultLED",  // A name just for humans
     2048,              // The stack size can be checked by calling `uxHighWaterMark = uxTaskGetStackHighWaterMark(NULL);`
-    NULL,    // When no parameter is used, simply pass NULL
+    NULL,              // When no parameter is used, simply pass NULL
     2,                 // Priority
     NULL               // Task handle is not used here - simply pass NULL
   );
 }
 
 void TaskDefaultLED(void *pvParameters) {  // This is a task.
-  (void) pvParameters;
+  (void)pvParameters;
+
+
+  strip.setLedColorData(0, strip.Wheel(100));
+  delay(1000 * 10);
 
   for (;;) {
     uint32_t deviceId = getDeviceId();

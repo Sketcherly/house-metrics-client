@@ -23,6 +23,7 @@ void TaskTemperatureDevice(void *pvParameters) {  // This is a task.
   (void)pvParameters;
 
   for (;;) {
+    Serial.println("TaskTemperatureDevice start");
     uint32_t deviceId = getDeviceId();
 
     float temperature = getTemperature();
@@ -37,6 +38,8 @@ void TaskTemperatureDevice(void *pvParameters) {  // This is a task.
 
     metricsPost(String(deviceId), datetime, "T", temperature);
 
+    Serial.println("TaskTemperatureDevice start");
+
     delay(1000 * 60);
   }
 }
@@ -45,4 +48,3 @@ float getTemperature() {
   sensors.requestTemperatures();
   return sensors.getTempCByIndex(0);
 }
-
