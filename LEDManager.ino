@@ -25,7 +25,8 @@ void TaskDefaultLED(void *pvParameters) {  // This is a task.
   (void) pvParameters;
 
   for (;;) {
-    Serial.println("Task1");
+    uint32_t deviceId = getDeviceId();
+    Serial.println("HelloWorld, Chip ID: " + String(deviceId));
 
     for (int j = 0; j < 255; j += 2) {
       for (int i = 0; i < DEFAULT_LED_COUNT; i++) {

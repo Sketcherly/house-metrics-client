@@ -30,12 +30,12 @@ void TaskTemperatureDevice(void *pvParameters) {  // This is a task.
     char datetime[64];
     getCurrentTime(datetime);
 
-    Serial.print(datetime);
-    Serial.print(" - ");
-    Serial.print(temperature);
-    Serial.println("ºC");
+    // Serial.print(datetime);
+    // Serial.print(" - ");
+    // Serial.print(temperature);
+    // Serial.println("ºC");
 
-    httpPost(String(deviceId), datetime, temperature);
+    metricsPost(String(deviceId), datetime, "T", temperature);
 
     delay(1000 * 60);
   }

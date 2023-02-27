@@ -5,13 +5,14 @@ void setup() {
 
   wifiStartUp();
 
+  setupRebootManager();
+
   setupSystemTime();
 
   delay(10000);
 
   setupTemperatureDevice();
 
-  Serial.printf("Basic Multi Threading Arduino Example\n");
 }
 
 void loop() {

@@ -1,8 +1,11 @@
 // #define WIFI_SSID "TP-LINK_1755"
 // #define WIFI_PASSWORD "1234567890"
 
-#define WIFI_SSID "TP-LINK_F65D"
-#define WIFI_PASSWORD "lidongpo"
+// #define WIFI_SSID "TP-LINK_F65D"
+// #define WIFI_PASSWORD "lidongpo"
+
+#define WIFI_SSID "rigongyizu"
+#define WIFI_PASSWORD "xiaozu100000"
 
 void wifiStartUp() {
   // connect to WiFi
